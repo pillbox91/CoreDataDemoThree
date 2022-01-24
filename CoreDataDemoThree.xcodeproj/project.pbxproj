@@ -14,6 +14,11 @@
 		3238D426279EA2AD00A5ABB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3238D425279EA2AD00A5ABB3 /* Assets.xcassets */; };
 		3238D429279EA2AD00A5ABB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3238D427279EA2AD00A5ABB3 /* LaunchScreen.storyboard */; };
 		3238D431279EA4EE00A5ABB3 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3238D430279EA4EE00A5ABB3 /* CoreDataStack.swift */; };
+		3238D436279EAA5400A5ABB3 /* CoreDataDemoThree.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3238D434279EAA5400A5ABB3 /* CoreDataDemoThree.xcdatamodeld */; };
+		3238D43B279EABAB00A5ABB3 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3238D437279EABAB00A5ABB3 /* User+CoreDataClass.swift */; };
+		3238D43C279EABAB00A5ABB3 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3238D438279EABAB00A5ABB3 /* User+CoreDataProperties.swift */; };
+		3238D43D279EABAB00A5ABB3 /* Meal+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3238D439279EABAB00A5ABB3 /* Meal+CoreDataClass.swift */; };
+		3238D43E279EABAB00A5ABB3 /* Meal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3238D43A279EABAB00A5ABB3 /* Meal+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		3238D428279EA2AD00A5ABB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3238D42A279EA2AD00A5ABB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3238D430279EA4EE00A5ABB3 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		3238D435279EAA5400A5ABB3 /* MealTime.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MealTime.xcdatamodel; sourceTree = "<group>"; };
+		3238D437279EABAB00A5ABB3 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3238D438279EABAB00A5ABB3 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3238D439279EABAB00A5ABB3 /* Meal+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Meal+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3238D43A279EABAB00A5ABB3 /* Meal+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Meal+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +52,7 @@
 		3238D410279EA2A500A5ABB3 = {
 			isa = PBXGroup;
 			children = (
+				3238D43F279EACD700A5ABB3 /* CoreData Entities */,
 				3238D41B279EA2A500A5ABB3 /* CoreDataDemoThree */,
 				3238D41A279EA2A500A5ABB3 /* Products */,
 			);
@@ -66,8 +77,20 @@
 				3238D425279EA2AD00A5ABB3 /* Assets.xcassets */,
 				3238D427279EA2AD00A5ABB3 /* LaunchScreen.storyboard */,
 				3238D42A279EA2AD00A5ABB3 /* Info.plist */,
+				3238D434279EAA5400A5ABB3 /* CoreDataDemoThree.xcdatamodeld */,
 			);
 			path = CoreDataDemoThree;
+			sourceTree = "<group>";
+		};
+		3238D43F279EACD700A5ABB3 /* CoreData Entities */ = {
+			isa = PBXGroup;
+			children = (
+				3238D437279EABAB00A5ABB3 /* User+CoreDataClass.swift */,
+				3238D438279EABAB00A5ABB3 /* User+CoreDataProperties.swift */,
+				3238D439279EABAB00A5ABB3 /* Meal+CoreDataClass.swift */,
+				3238D43A279EABAB00A5ABB3 /* Meal+CoreDataProperties.swift */,
+			);
+			path = "CoreData Entities";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,8 +166,13 @@
 			files = (
 				3238D421279EA2A500A5ABB3 /* ViewController.swift in Sources */,
 				3238D41D279EA2A500A5ABB3 /* AppDelegate.swift in Sources */,
+				3238D43B279EABAB00A5ABB3 /* User+CoreDataClass.swift in Sources */,
+				3238D43C279EABAB00A5ABB3 /* User+CoreDataProperties.swift in Sources */,
 				3238D41F279EA2A500A5ABB3 /* SceneDelegate.swift in Sources */,
+				3238D43E279EABAB00A5ABB3 /* Meal+CoreDataProperties.swift in Sources */,
 				3238D431279EA4EE00A5ABB3 /* CoreDataStack.swift in Sources */,
+				3238D43D279EABAB00A5ABB3 /* Meal+CoreDataClass.swift in Sources */,
+				3238D436279EAA5400A5ABB3 /* CoreDataDemoThree.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,6 +392,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3238D434279EAA5400A5ABB3 /* CoreDataDemoThree.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3238D435279EAA5400A5ABB3 /* MealTime.xcdatamodel */,
+			);
+			currentVersion = 3238D435279EAA5400A5ABB3 /* MealTime.xcdatamodel */;
+			path = CoreDataDemoThree.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 3238D411279EA2A500A5ABB3 /* Project object */;
 }
