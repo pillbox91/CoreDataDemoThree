@@ -22,24 +22,6 @@ class ViewController: UIViewController {
         return formatter
     }()
     
-    @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
-        
-        let meal = Meal(context: context)
-        meal.date = Date()
-        
-        let meals = user.meals?.mutableCopy() as? NSMutableOrderedSet
-        meals?.add(meal)
-        user.meals = meals
-        
-        do {
-            try context.save()
-            tableView.reloadData()
-        } catch let error as NSError {
-            print(error.localizedDescription)
-        }
-        
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
@@ -60,6 +42,25 @@ class ViewController: UIViewController {
         } catch let error as NSError {
             print(error.localizedDescription)
         }
+    }
+
+    
+    @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
+        
+        let meal = Meal(context: context)
+        meal.date = Date()
+        
+        let meals = user.meals?.mutableCopy() as? NSMutableOrderedSet
+        meals?.add(meal)
+        user.meals = meals
+        
+        do {
+            try context.save()
+            tableView.reloadData()
+        } catch let error as NSError {
+            print(error.localizedDescription)
+        }
+        
     }
 }
 
@@ -83,6 +84,20 @@ extension ViewController: UITableViewDataSource {
         
         cell.textLabel!.text = dateFormatter.string(from: mealDate)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        guard let meal = user.meals?[indexPath.row] as? Meal,
+              editingStyle == .delete else {return}
+        
+        context.delete(meal)
+        
+        do {
+            try context.save()
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        } catch let error as NSError {
+            print(error.localizedDescription)
+        }
     }
 }
 

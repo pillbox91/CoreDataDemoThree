@@ -11,7 +11,7 @@
         <!--MealTime-->
         <scene sceneID="71h-Zw-7uk">
             <objects>
-                <viewController id="Kts-h5-igc" customClass="ViewController" customModule="MealTime" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Kts-h5-igc" customClass="ViewController" customModule="CoreDataDemoThree" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uq5-dT-cPc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,9 +22,8 @@
                                     <constraint firstAttribute="width" secondItem="JAM-80-hfp" secondAttribute="height" multiplier="417:155" id="Klw-mN-vxq"/>
                                 </constraints>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Xva-7c-4oH">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Xva-7c-4oH">
                                 <rect key="frame" x="0.0" y="238" width="414" height="624"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Kts-h5-igc" id="k6r-Cx-x2a"/>
@@ -36,8 +35,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="JAM-80-hfp" firstAttribute="leading" secondItem="giB-24-mFB" secondAttribute="leading" id="1er-EG-6ZB"/>
+                            <constraint firstItem="Xva-7c-4oH" firstAttribute="leading" secondItem="giB-24-mFB" secondAttribute="leading" id="42l-v2-3N1"/>
                             <constraint firstItem="JAM-80-hfp" firstAttribute="trailing" secondItem="giB-24-mFB" secondAttribute="trailing" id="PMV-lE-hLz"/>
+                            <constraint firstItem="Xva-7c-4oH" firstAttribute="bottom" secondItem="giB-24-mFB" secondAttribute="bottom" id="XWQ-vm-dHj"/>
+                            <constraint firstItem="Xva-7c-4oH" firstAttribute="trailing" secondItem="giB-24-mFB" secondAttribute="trailing" id="jYA-U6-ht6"/>
                             <constraint firstItem="JAM-80-hfp" firstAttribute="top" secondItem="giB-24-mFB" secondAttribute="top" id="lH8-OB-PgY"/>
+                            <constraint firstItem="Xva-7c-4oH" firstAttribute="top" secondItem="JAM-80-hfp" secondAttribute="bottom" constant="-4" id="rIX-Tg-qSk"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="MealTime" id="Tk9-K8-BHV">
